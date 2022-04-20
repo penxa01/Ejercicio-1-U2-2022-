@@ -14,6 +14,9 @@ class Email:
     def GetDominio(self):
         DominioSolicitado= self.__dominio
         return DominioSolicitado
+    def Getid(self):
+        IDSolicitado= self.__idmail
+        return IDSolicitado
     def CrearCuenta(self, NuevoMail):
         arroba= NuevoMail.rfind("@")
         punto = NuevoMail.rfind(".")

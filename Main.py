@@ -23,15 +23,15 @@ if __name__ == "__main__":
     archivo =open(Archivo)
     cont = 0
     reader = csv.reader(archivo,delimiter = ";")
-    domPrueba= input(" Ingrese dominio que desea verificar(yahoo,gmail,hotmail,etc)\n")
+    IDPrueba= input(" Ingrese ID que desea verificar\n")
     mailItem4= Email()
     for comp in reader:
             for i in range(10): 
                 mailItem4.CrearCuenta(comp[i])
-                domin = mailItem4.GetDominio()
-                if domPrueba == domin:
+                ident = mailItem4.Getid()
+                if IDPrueba == ident:
                     cont += 1
-    print("Hay {} mail con el dominio {}\n".format(cont,domPrueba))
+    print("Hay {} mail con el ID {}\n".format(cont,IDPrueba))
     archivo.close()
 
 
